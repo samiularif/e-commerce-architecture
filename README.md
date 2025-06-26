@@ -1,7 +1,7 @@
 # e-commerce-architecture
 Designed and implemented a highly available, scalable, and secure cloud-based architecture for an e-commerce platform using Amazon Web Services (AWS). The architecture was built with a focus on performance optimization, fault tolerance, and modular service design, supporting millions of concurrent users.
 
-Components:
+##Components:
 Traffic Management & CDN: Integrated AWS Route 53 for DNS routing with Global Traffic Management and AWS CloudFront for content delivery, backed by S3 buckets for static asset hosting.
 Security: Deployed AWS Web Application Firewall (WAF) and Application Load Balancer (ALB) to safeguard against common web threats and efficiently distribute incoming traffic.
 Containerized Backend: Utilized Amazon EKS (Elastic Kubernetes Service) with auto-scaling to host microservices including Read API, Write API, and auxiliary services within private subnets.
