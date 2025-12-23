@@ -13,6 +13,16 @@ This architecture is designed to:
 - Securely integrate with external services
 - Provide resilience via multi-AZ setup
 
+## How puzzle works together
++ **Traffic Management & CDN:** Integrated AWS Route 53 for DNS routing with Global Traffic Management and AWS CloudFront for content delivery, backed by S3 buckets for static asset hosting.
++ **Security:** Deployed AWS Web Application Firewall (WAF) and Application Load Balancer (ALB) to safeguard against common web threats and efficiently distribute incoming traffic.
+- **Containerized Back-end:** Utilized Amazon EKS (Elastic Kubernetes Service) with auto-scaling to host micro-services including Read API, Write API, and auxiliary services within private subnets.
+- **Database Layer:** Implemented a robust database setup using Amazon RDS with primary-replica architecture and ElastiCache for in-memory caching to enhance data retrieval performance. DynamoDB was integrated for specific high-throughput use cases.
+- **Asynchronous Processing:** Leveraged Amazon SQS and Lambda for handling background jobs, ensuring decoupling and fault tolerance for long-running processes.
+- **External Integrations:** Connected external services via AWS Lambda and API Gateway to maintain modularity and secure third-party API communication.
+- **High Availability:** Architected the solution across multiple Availability Zones to ensure business continuity and failover support.
+
+
 ## 🔧 Tech Stack
 
 - **Cloud Provider**: AWS  
